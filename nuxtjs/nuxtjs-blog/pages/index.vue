@@ -4,24 +4,9 @@
       <h1>Get the latest news!</h1>
     </section>
     <section class="featured-posts">
-      <nuxt-link :to="'/posts/' + 1" class="post-preview">
-        <article>
-          <div class="post-thumbnail" style="background-image: url('https://static.techspot.com/images2/news/bigimage/2016/11/2016-11-21-image-2.jpg')"></div>
-          <div class="post-content">
-            <h1>Post Title</h1>
-            <p>Preview text</p>
-          </div>
-        </article>
-      </nuxt-link>
-      <nuxt-link :to="'/posts/' + 2" class="post-preview">
-        <article>
-          <div class="post-thumbnail" style="background-image: url('https://static.techspot.com/images2/news/bigimage/2016/11/2016-11-21-image-2.jpg')"></div>
-          <div class="post-content">
-            <h1>Post Title</h1>
-            <p>Preview text</p>
-          </div>
-        </article>
-      </nuxt-link>
+      <PostPreview id="1" title="Hello there!" previewText="This is my first post!" thumbnail="https://static.techspot.com/images2/news/bigimage/2016/11/2016-11-21-image-2.jpg" />
+      <PostPreview id="2" title="Hello there!" previewText="This is my second post!" thumbnail="https://static.techspot.com/images2/news/bigimage/2016/11/2016-11-21-image-2.jpg" />
+      <PostPreview id="3" title="Hello there!" previewText="This is my third post!" thumbnail="https://static.techspot.com/images2/news/bigimage/2016/11/2016-11-21-image-2.jpg" />
     </section>
   </div>
 </template>
@@ -32,6 +17,7 @@
   position: relative;
   padding: 30px;
   box-sizing: border-box;
+  background-image: url('~assets/img/main-page-background.jpg');
   background-position: center;
   background-size: cover;
 }
@@ -65,40 +51,15 @@
   align-items: center;
   justify-content: center;
 }
+</style>
 
-.post-preview {
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 2px #ccc;
-  background-color: white;
-  width: 90%;
-}
+<script>
+import PostPreview from '@/components/Posts/PostPreview'
 
-a {
-  text-decoration: none;
-  color: black;
-}
-
-@media (min-width: 850px) {
-  .post-preview {
-    width: 400px;
-    margin: 10px;
+export default {
+  components: {
+    PostPreview: PostPreview
   }
 }
 
-.post-thumbnail {
-  width: 100%;
-  height: 200px;
-  background-position: center;
-  background-size: cover;
-}
-
-.post-content {
-  padding: 10px;
-  text-align: center;
-}
-
-a:hover .post-content,
-a:active .post-content {
-  background-color: #ccc;
-}
-</style>
+</script>
