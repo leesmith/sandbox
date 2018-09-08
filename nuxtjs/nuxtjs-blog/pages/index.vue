@@ -3,11 +3,7 @@
     <section class="intro">
       <h1>Get the latest news!</h1>
     </section>
-    <section class="featured-posts">
-      <PostPreview id="1" title="Hello there!" previewText="This is my first post!" thumbnail="https://static.techspot.com/images2/news/bigimage/2016/11/2016-11-21-image-2.jpg" />
-      <PostPreview id="2" title="Hello there!" previewText="This is my second post!" thumbnail="https://static.techspot.com/images2/news/bigimage/2016/11/2016-11-21-image-2.jpg" />
-      <PostPreview id="3" title="Hello there!" previewText="This is my third post!" thumbnail="https://static.techspot.com/images2/news/bigimage/2016/11/2016-11-21-image-2.jpg" />
-    </section>
+    <PostList />
   </div>
 </template>
 
@@ -17,7 +13,7 @@
   position: relative;
   padding: 30px;
   box-sizing: border-box;
-  background-image: url('~assets/img/main-page-background.jpg');
+  background-image: url("~assets/img/main-page-background.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -54,12 +50,11 @@
 </style>
 
 <script>
-import PostPreview from '@/components/Posts/PostPreview'
+import PostList from "@/components/Posts/PostList";
 
 export default {
   components: {
-    PostPreview: PostPreview
+    PostList: PostList
   }
-}
-
+};
 </script>
