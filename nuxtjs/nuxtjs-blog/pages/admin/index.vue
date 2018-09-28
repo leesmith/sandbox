@@ -5,19 +5,19 @@
     </section>
     <section class="existing-posts">
       <h1>Existing Posts</h1>
-      <PostList />
+      <PostList isAdmin />
     </section>
   </div>
 </template>
 
 <script>
-import PostList from '@/components/Posts/PostList'
+import PostList from "@/components/Posts/PostList";
 
 export default {
   components: {
     PostList
   }
-}
+};
 </script>
 
 <style scoped>
