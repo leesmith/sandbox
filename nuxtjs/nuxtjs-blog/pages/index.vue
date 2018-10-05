@@ -3,9 +3,39 @@
     <section class="intro">
       <h1>Get the latest news!</h1>
     </section>
-    <PostList />
+    <PostList :posts="loadedPosts" />
   </div>
 </template>
+
+<script>
+import PostList from "@/components/Posts/PostList";
+
+export default {
+  components: {
+    PostList
+  },
+  data() {
+    return {
+      loadedPosts: [
+        {
+          id: "1",
+          title: "First Post",
+          previewText: "This is my first post!",
+          thumbnail:
+            "https://static.techspot.com/images2/news/bigimage/2016/11/2016-11-21-image-2.jpg"
+        },
+        {
+          id: "2",
+          title: "Second Post",
+          previewText: "This is my second post!",
+          thumbnail:
+            "https://static.techspot.com/images2/news/bigimage/2016/11/2016-11-21-image-2.jpg"
+        }
+      ]
+    };
+  }
+};
+</script>
 
 <style scoped>
 .intro {
@@ -48,13 +78,3 @@
   justify-content: center;
 }
 </style>
-
-<script>
-import PostList from "@/components/Posts/PostList";
-
-export default {
-  components: {
-    PostList: PostList
-  }
-};
-</script>
