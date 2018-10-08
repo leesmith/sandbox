@@ -11,35 +11,10 @@ export default {
   components: {
     PostList
   },
-  asyncData(context) {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve({
-          loadedPosts: [
-            {
-              id: "1",
-              title: "First Post",
-              previewText: "This is my first post!",
-              thumbnail:
-                "https://static.techspot.com/images2/news/bigimage/2016/11/2016-11-21-image-2.jpg"
-            },
-            {
-              id: "2",
-              title: "Second Post",
-              previewText: "This is my second post!",
-              thumbnail:
-                "https://static.techspot.com/images2/news/bigimage/2016/11/2016-11-21-image-2.jpg"
-            }
-          ]
-        });
-      }, 1000);
-    })
-      .then(data => {
-        return data;
-      })
-      .catch(e => {
-        context.error(new Error());
-      });
+  computed: {
+    loadedPosts() {
+      return this.$store.getters.loadedPosts;
+    }
   }
 };
 </script>
