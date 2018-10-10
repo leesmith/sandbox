@@ -38,5 +38,8 @@ module.exports = {
         });
       }
     }
+  },
+  env: {
+    baseUrl: process.env.BASE_URL || 'https://sandbox-nuxt-blog.firebaseio.com'
   }
 };
