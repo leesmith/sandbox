@@ -20,6 +20,9 @@ module.exports = {
   css: [
     '~assets/css/main.css'
   ],
+  plugins: [
+    '~plugins/core-components.js'
+  ],
   /*
   ** Customize the progress bar color
   */
