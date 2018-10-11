@@ -60,4 +60,17 @@ export default {
   border: 1px solid transparent;
   color: white;
 }
+
+.back {
+  background-color: #cfcfcf;
+  color: black;
+  border: 1px solid transparent;
+}
+
+.back:hover,
+.back:active {
+  background-color: #dfdfdf;
+  border: 1px solid transparent;
+  color: black;
+}
 </style>
