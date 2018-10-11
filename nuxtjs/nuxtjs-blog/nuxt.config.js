@@ -21,7 +21,8 @@ module.exports = {
     '~assets/css/main.css'
   ],
   plugins: [
-    '~plugins/core-components.js'
+    '~plugins/core-components.js',
+    '~plugins/date-filter.js'
   ],
   /*
   ** Customize the progress bar color
