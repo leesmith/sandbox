@@ -77,6 +77,6 @@ a {
 
 a:hover .post-content,
 a:active .post-content {
-  background-color: #ccc;
+  background-color: #f2f2f2;
 }
 </style>
