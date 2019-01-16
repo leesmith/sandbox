@@ -24,6 +24,13 @@ module.exports = {
     '~plugins/core-components.js',
     '~plugins/date-filter.js'
   ],
+  modules: [
+    '@nuxtjs/axios',
+  ],
+  axios: {
+    baseURL: process.env.BASE_URL || 'https://sandbox-nuxt-blog.firebaseio.com',
+    credentials: false
+  },
   /*
   ** Customize the progress bar color
   */
@@ -45,8 +52,5 @@ module.exports = {
         });
       }
     }
-  },
-  env: {
-    baseUrl: process.env.BASE_URL || 'https://sandbox-nuxt-blog.firebaseio.com'
   }
 };
