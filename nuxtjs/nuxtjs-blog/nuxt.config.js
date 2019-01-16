@@ -27,7 +27,7 @@ module.exports = {
   modules: [
     '@nuxtjs/axios',
   ],
-  nuxt: {
+  axios: {
     baseURL: process.env.BASE_URL || 'https://sandbox-nuxt-blog.firebaseio.com',
     credentials: false
   },
